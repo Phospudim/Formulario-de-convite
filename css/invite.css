@@ -1,0 +1,11 @@
+.invite{
+    background-color: #212427;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

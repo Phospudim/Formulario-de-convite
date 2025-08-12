@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 20px;
+    color: aliceblue;
+    display: grid;
+    gap: 2rem;
+    background-color: #131516;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    min-height: 100vh;
+}
+
+.brand {
+    border-radius: 12px;
+    background: url(../assets/Background.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 2rem 2rem;
+
+    & img {
+        width: 46px;
+        height: 48px;
+        margin-bottom: 1rem;
+        padding-bottom: 16px;
+    }
+    & h1 {
+        color: #FF598B;
+        font-family: "Leckerli One", cursive;
+        font-size: 40px;
+        font-weight: regular;
+        line-height: auto;
+    }
+
+    & p {
+        padding-top: 4px;
+        color: #F9F9F9;
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.invite{
+    background-color: #212427;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
