@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  margin: 20px;
+}
+body {
+  color: aliceblue;
+  display: grid;
+  gap: 2rem;
+  background-color: #131516;
+  grid-template-columns: 1fr 2fr;
+}
+img {
+  max-width: 100%;
+}
+
+input {
+  font-family: "Open Sans", sans-serif;
+  
+}
+

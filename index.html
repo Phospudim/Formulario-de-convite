@@ -1,42 +1,390 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de convite</title>
-    <link rel="stylesheet" href="/css/index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Convite</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
 
-        <div class="brand">
-            <img src="assets/Logo.svg" alt="Logo">
+  <body>
+    <!-- ===========================
+         MARCA E CABEÇALHO
+    ============================ -->
+    <div class="brand">
+      <img src="assets/Logo.svg" alt="Logo" />
+      <h1>Festivite</h1>
+      <p>Crie um convite digital para o seu evento</p>
+    </div>
 
-            <h1>Festivite</h1>
-            <p>Crie um convite digital para o seu evento</p>
+    <!-- ===========================
+         CONTAINER PRINCIPAL
+    ============================ -->
+    <div class="invite">
+      <h2>Crie seu convite</h2>
 
-            
-        </div>
-  <div class="invite">
-           
-
-            <h2>Crie seu convite</h2>
-            <p>Preencha os campos abaixo para criar o seu convite digital.</p>
+      <section class="crie-seu-convite">
         <div class="form">
-            <form action="">
-                <label for="name">Nome do evento</label>
-                <input type="text" id="name" placeholder="Digite o nome do evento">
+          <!-- TÍTULO DA SEÇÃO -->
+          <p>
+            <img src="assets/calender.svg" alt="Ícone de calendário" />
+            Sobre o evento
+          </p>
 
-                <label for="date">Data do evento</label>
-                <input type="date" id="date">
+          <!-- ===========================
+               FORMULÁRIO
+          ============================ -->
+          <form action="#">
+            <!-- CAMPO: Título do evento -->
+            <label for="name">Título</label>
+            <input type="text" id="name" placeholder="Nome do evento" />
 
-                <label for="time">Horário do evento</label>
-                <input type="time" id="time">
+            <!-- CAMPOS: Datas de início e fim -->
+            <div class="data">
+              <div class="data-item">
+                <label for="date">Início</label>
+                <input type="datetime-local" id="date" />
+              </div>
 
-                <label for="location">Local do evento</label>
-                <input type="text" id="location" placeholder="Digite o local do evento">
+              <div class="data-item">
+                <label for="end-date">Fim</label>
+                <input type="datetime-local" id="date" />
+              </div>
+            </div>
 
-                <button type="submit">Criar convite</button>
-            </form>
-  <div>
-</body>
+            <!-- CAMPOS: Tipo do evento + Local -->
+            <div class="tipo-local-row">
+              <!-- Tipo: Presencial ou Online -->
+              <div class="presencial-online-box">
+                <label>Tipo</label>
+
+                <div class="container-inputs">
+                  <!-- Opção Presencial -->
+                  <div class="container-option">
+                    <input
+                      type="radio"
+                      name="presencial-online"
+                      id="presencial"
+                      value="Presencial"
+                      checked
+                    />
+                    <img src="assets/builden.svg" alt="Ícone de prédio" />
+                    <label for="presencial">Presencial</label>
+                  </div>
+
+                  <!-- Opção Online -->
+                  <div class="container-option">
+                    <input
+                      type="radio"
+                      name="presencial-online"
+                      id="online"
+                      value="Online"
+                    />
+                    <img src="assets/online.svg" alt="Ícone de câmera" />
+                    <label for="online">Online</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Local do evento -->
+              <div class="local">
+                <label for="local-event">Local</label>
+                <input
+                  type="text"
+                  name="Local"
+                  id="local-event"
+                  placeholder="Link ou endereço"
+                />
+              </div>
+            </div>
+
+            <!-- CAMPO: Descrição -->
+            <div class="container-descricao">
+              <label for="descricao">Descrição</label>
+              <textarea
+                name="descricao"
+                id="descricao"
+                placeholder="Escreva sobre os detalhes do evento"
+              ></textarea>
+            </div>
+
+            <!-- ===========================
+                 SEÇÃO DE PERSONALIZAÇÃO
+            ============================ -->
+            <div class="personalizacao-box">
+              <!-- Título da personalização -->
+              <div class="box-personalizacao">
+                <img src="assets/painter.svg" alt="Ícone de pincel" />
+                <h3>Personalização</h3>
+              </div>
+
+              <!-- ===========================
+                   SELETOR DE CORES
+              ============================ -->
+              <div class="colors-box">
+                <p>Cor principal</p>
+
+                <div class="colors">
+                  <!-- Cor 1 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color1"
+                      value="#59B2FF"
+                      checked
+                    />
+                    <label
+                      for="color1"
+                      style="background-color: #59b2ff"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 2 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color2"
+                      value="#6A59FF"
+                    />
+                    <label
+                      for="color2"
+                      style="background-color: #6a59ff"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 3 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color3"
+                      value="#B259FF"
+                    />
+                    <label
+                      for="color3"
+                      style="background-color: #b259ff"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 4 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color4"
+                      value="#FF59F9"
+                    />
+                    <label
+                      for="color4"
+                      style="background-color: #ff59f9"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 5 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color5"
+                      value="#FF598B"
+                    />
+                    <label
+                      for="color5"
+                      style="background-color: #ff598b"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 6 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color6"
+                      value="#FF5959"
+                    />
+                    <label
+                      for="color6"
+                      style="background-color: #ff5959"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 7 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color7"
+                      value="#FF8B59"
+                    />
+                    <label
+                      for="color7"
+                      style="background-color: #ff8b59"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 8 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color8"
+                      value="#FFCD59"
+                    />
+                    <label
+                      for="color8"
+                      style="background-color: #ffcd59"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 9 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color9"
+                      value="#E1FF59"
+                    />
+                    <label
+                      for="color9"
+                      style="background-color: #e1ff59"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 10 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color10"
+                      value="#59FF91"
+                    />
+                    <label
+                      for="color10"
+                      style="background-color: #59ff91"
+                    ></label>
+                  </div>
+
+                  <!-- Cor 11 -->
+                  <div class="color-item">
+                    <input
+                      type="radio"
+                      name="color"
+                      id="color11"
+                      value="#59FFF9"
+                    />
+                    <label
+                      for="color11"
+                      style="background-color: #59fff9"
+                    ></label>
+                  </div>
+
+                  <!-- Adicione mais cores se quiser -->
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <!-- Seção de Tema do Evento -->
+              <div class="evento">
+                <h2>Tema do evento</h2>
+                <div class="temas">
+                  <!-- Cada tema é um botão com imagem e texto -->
+                  <div class="tema ativo">
+                    <img src="imagens/aniversario.jpg" alt="Aniversário" />
+                    <span>Aniversário</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/infantil.jpg" alt="Infantil" />
+                    <span>Infantil</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/formatura.jpg" alt="Formatura" />
+                    <span>Formatura</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/casamento.jpg" alt="Casamento" />
+                    <span>Casamento</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/cha-bebe.jpg" alt="Chá de bebê" />
+                    <span>Chá de bebê</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/cha-panela.jpg" alt="Chá de panela" />
+                    <span>Chá de panela</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/carnaval.jpg" alt="Carnaval" />
+                    <span>Carnaval</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/pascoa.jpg" alt="Páscoa" />
+                    <span>Páscoa</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/sao-joao.jpg" alt="São João" />
+                    <span>São João</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/halloween.jpg" alt="Halloween" />
+                    <span>Halloween</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/natal.jpg" alt="Natal" />
+                    <span>Natal</span>
+                  </div>
+                  <div class="tema">
+                    <img src="imagens/outro.jpg" alt="Outro" />
+                    <span>Outro</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Seção de Estilo e Foto de capa -->
+              <div class="estilo-foto">
+                <div class="estilo">
+                  <label for="tema-escuro">Escuro</label>
+                  <input type="checkbox" id="tema-escuro" />
+                </div>
+                <div class="foto-capa">
+                  <label for="arquivo">Foto de capa</label>
+                  <input type="file" id="arquivo" />
+                  <span>Nenhum arquivo selecionado</span>
+                </div>
+              </div>
+
+              <!-- Seção de Dados para Contato -->
+              <div class="contato">
+                <h2>Dados para contato</h2>
+                <form>
+                  <input type="text" placeholder="Nome completo" required />
+                  <input type="email" placeholder="exemplo@email.com" />
+                  <input type="tel" placeholder="(99) 99999-9999" />
+
+                  <!-- Checkboxes de concordância -->
+                  <label>
+                    <input type="checkbox" checked />
+                    Li e concordo com os <a href="#">Termos e Condições</a> e
+                    com a <a href="#">Política de Privacidade</a>
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    Aceito receber atualizações e promoções por e-mail
+                  </label>
+                  <label>
+                    <input type="checkbox" />
+                    Aceito receber atualizações e promoções por SMS
+                  </label>
+
+                  <button type="submit">Gerar convite</button>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
