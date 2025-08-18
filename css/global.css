@@ -3,22 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  margin: 20px;
-}
+
 body {
-  color: aliceblue;
-  display: grid;
-  gap: 2rem;
-  background-color: #131516;
-  grid-template-columns: 1fr 2fr;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  
+  
 }
+
+.div-suprema {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  background-color: #131516;
+}
+
+
+.div-suprema::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
 img {
   max-width: 100%;
 }
 
 input {
   font-family: "Open Sans", sans-serif;
+
   
+}
+.invite::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
