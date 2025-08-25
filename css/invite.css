@@ -344,7 +344,7 @@ h2 {
 }
 
 .switch input:checked + label::after {
-  left: calc(100% - 31px);
+  left: calc(100% - 29px);
   background-color: #fff;
 }
 
@@ -352,12 +352,12 @@ h2 {
   content: "Escuro";
   margin-left: 10px;
   font-weight: bold;
-  color: #fff; /* cor do texto */
+  color: #fff; 
 }
 
 .switch input:checked ~ .texto::before {
   content: "Claro";
-  color: #fff; /* opcional: muda cor junto */
+  color: #fff; 
 }
 
 /*  ------------------------------------ */
